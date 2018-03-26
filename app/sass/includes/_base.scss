@@ -1,0 +1,26 @@
+$body-backgroundImage: none !default;
+$body-backgroundRepeat: no-repeat !default;
+$body-padding: 0 !default;
+$body-fontFamily: sans-serif !default;
+$body-color: #000 !default;
+
+// --------------------------------------------------------------
+
+body {
+    background-image: $body-backgroundImage;
+    background-repeat: $body-backgroundRepeat;
+    padding: $body-padding;
+    font-family: $body-fontFamily;
+    color: $body-color;
+}
+
+hr {
+    border-width: 0 0 1px 0;
+    border-style: dotted;
+    border-color: $gray-light;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 20px;
+}

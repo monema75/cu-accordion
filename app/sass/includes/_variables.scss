@@ -1,0 +1,57 @@
+$black: #333;
+$white: #fff;
+$gray: #999;
+$gray-light: lighten($gray, 10%);
+$gray-lighter: lighten($gray, 20%);
+$gray-lightest: lighten($gray, 30%);
+$gray-dark: darken($gray, 10%);
+$gray-darker: darken($gray, 20%);
+$gray-darkest: darken($gray, 30%);
+$color-primary: red;
+$color-secondary: blue; 
+
+// Base ---------------------------------------------------------------------
+$body-backgroundImage: url("../images/debut_light.png");
+$body-backgroundRepeat: repeat;
+$body-padding: 0;
+$body-fontFamily: "Roboto", sans-serif;
+$body-color: $black;
+
+// Page ---------------------------------------------------------------------
+$Page-maxWidth: 1300px;
+$Page-padding: 20px;
+$Page-title-padding: 0 20px;
+$Page-section-padding: 0 20px 40px;
+$Page-sectionBlock-padding: 0 20px;
+
+// cu-accordion -------------------------------------------------------------
+$CuAccordion-padding: 0;
+$CuAccordion-border: 1px solid $gray-lighter;
+$CuAccordion-boxShadow: rgba(0, 0, 0, 0.06) 0 2px 1px;
+$CuAccordion-margin: 0 0 20px;
+
+$CuAccordion-childTitle-padding: 10px 20px;
+$CuAccordion-childTitle-background: linear-gradient(to bottom, #ffffff 1%, #eaeaea 100%);
+$CuAccordion-childTitle-borderRadius: 0px;
+$CuAccordion-childTitle-fontFamily: "Anton";
+$CuAccordion-childTitle-fontWeight: normal;
+$CuAccordion-childTitle-fontStyle: normal;
+$CuAccordion-childTitle-fontSize: 16px;
+$CuAccordion-childTitle-color: $gray-darkest;
+
+$CuAccordion-childTitle-onHover-background: $white;
+$CuAccordion-childTitle-onHover-color: $CuAccordion-childTitle-color;
+
+$CuAccordion-childTitle-isOpen-background: #c7e1ec;
+$CuAccordion-childTitle-isOpen-color: darken($CuAccordion-childTitle-isOpen-background, 50%);
+
+$CuAccordion-childContent-transition: all 150ms ease-out;
+$CuAccordion-childContent-paddingHorizontal: 20px;
+$CuAccordion-childContent-paddingVertical: 20px;
+$CuAccordion-childContent-backgroundColor: rgba($black, .03);
+$CuAccordion-childContent-borderRadius: 0;
+$CuAccordion-childContent-box-shadow: rgba(0,0,0,.05) 0 2px 1px 0 inset;
+$CuAccordion-childContent-fontFamily: "Crimson Text";
+$CuAccordion-childContent-fontWeight: normal;
+$CuAccordion-childContent-fontStyle: italic;
+$CuAccordion-childContent-fontSize: inherit;

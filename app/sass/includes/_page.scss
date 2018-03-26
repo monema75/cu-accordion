@@ -1,0 +1,32 @@
+$Page-maxWidth: 1300px !default;
+$Page-padding: 20px !default;
+$Page-title-padding: 0 20px !default;
+$Page-section-padding: 0 20px !default;
+$Page-sectionBlock-padding: 0 20px !default;
+
+// --------------------------------------------------------------------------
+
+.Page {
+    max-width: $Page-maxWidth;
+    margin: 0 auto;
+
+    &-title{
+        padding: $Page-title-padding;
+    }
+    
+    &-section{
+        padding: $Page-section-padding;
+    }
+    
+    &-sectionBlock{
+        padding: $Page-sectionBlock-padding;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

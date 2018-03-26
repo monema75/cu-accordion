@@ -1,0 +1,114 @@
+$CuAccordion-padding: 0 !default;
+$CuAccordion-border: none !default;
+$CuAccordion-boxShadow: none !default;
+$CuAccordion-margin: 0 !default;
+
+$CuAccordion-childTitle-padding: 10px !default;
+$CuAccordion-childTitle-background: #f00 !default;
+$CuAccordion-childTitle-borderRadius: 0px !default;
+$CuAccordion-childTitle-fontFamily: inherit !default;
+$CuAccordion-childTitle-fontWeight: normal !default;
+$CuAccordion-childTitle-fontStyle: normal !default;
+$CuAccordion-childTitle-fontSize: inherit !default;
+$CuAccordion-childTitle-color: #fff !default;
+
+$CuAccordion-childTitle-onHover-background: #000 !default;
+$CuAccordion-childTitle-onHover-color: #f0f !default;
+
+$CuAccordion-childTitle-isOpen-background: #00f !default;
+$CuAccordion-childTitle-isOpen-color: #fff !default;
+
+$CuAccordion-childContent-transition: all 150ms ease-out !default;
+$CuAccordion-childContent-paddingHorizontal: 20px !default;
+$CuAccordion-childContent-paddingVertical: 20px !default;
+$CuAccordion-childContent-backgroundColor: #efefef !default;
+$CuAccordion-childContent-borderRadius: 0 !default;
+$CuAccordion-childContent-box-shadow: rgba(0,0,0,.1) 0 3px 2px 0 inset !default;
+$CuAccordion-childContent-fontFamily: inherit !default;
+$CuAccordion-childContent-fontWeight: normal !default;
+$CuAccordion-childContent-fontStyle: normal !default;
+$CuAccordion-childContent-fontSize: inherit !default;
+
+// ----------------------------------------------------------------------------
+
+.cuAccordion {
+    &-container {
+        padding: $CuAccordion-padding;
+        border: $CuAccordion-border;
+        box-shadow: $CuAccordion-boxShadow;
+        margin: $CuAccordion-margin;
+    }
+
+    &-childTitle {
+        margin: 0;
+        padding: $CuAccordion-childTitle-padding;
+        background: $CuAccordion-childTitle-background;
+        color: $CuAccordion-childTitle-color;
+        border-bottom: $CuAccordion-border;
+        border-radius: $CuAccordion-childTitle-borderRadius;
+        font-family: $CuAccordion-childTitle-fontFamily;
+        font-size: $CuAccordion-childTitle-fontSize;
+        font-weight: $CuAccordion-childTitle-fontWeight;
+        font-style: $CuAccordion-childTitle-fontStyle;
+        user-select: none;
+        box-sizing: border-box;
+
+        &.is-open {
+            background: $CuAccordion-childTitle-isOpen-background !important;
+            color: $CuAccordion-childTitle-isOpen-color !important;
+            border-bottom: $CuAccordion-border !important;
+        }
+
+        &:hover {
+            background: $CuAccordion-childTitle-onHover-background;
+            color: $CuAccordion-childTitle-onHover-color;
+        }
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+
+    &-childContent {
+        margin: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: $CuAccordion-childContent-transition;
+        padding: 0 $CuAccordion-childContent-paddingHorizontal;
+        background-color: $CuAccordion-childContent-backgroundColor;
+        border-radius: $CuAccordion-childContent-borderRadius;
+        box-shadow: $CuAccordion-childContent-box-shadow;
+        font-family: $CuAccordion-childContent-fontFamily;
+        font-weight: $CuAccordion-childContent-fontWeight;
+        font-style: $CuAccordion-childContent-fontStyle;
+        font-size: $CuAccordion-childContent-fontSize;
+
+
+        p{
+            &:first-child {
+                margin-top: 0;
+            }    
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.is-open {
+            opacity: 1;
+            border-bottom: $CuAccordion-border;
+        }
+
+        &::before, 
+        &::after {
+            display: block;
+            content: "";
+            height: $CuAccordion-childContent-paddingVertical;
+        }
+
+        &:last-of-type {
+            border-bottom: 0 !important;
+        }
+    }
+}

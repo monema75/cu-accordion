@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= JSON.stringify(htmlWebpackPlugin.options.title) %></title>
+    <link href="styles/app.css" media="all" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="Page">
+        <h1 class="Page-title">cu-accordion (custom element)</h1>
+        <hr>
+        <section class="Page-section">
+          <h2>Out of the box</h2>
+          <div class="Page-sectionBlocks u-flex">
+            <div class="Page-sectionBlock u-flexGrow2">
+                <cu-accordion id="accordion-001"></cu-accordion>
+            </div>
+
+            <div class="Page-sectionBlock u-flexGrow3">
+              <section>
+                <h3>Add Child</h3>
+                <input id="addChild-title" type="text" placeholder="title"></input>  
+                <textarea id="addChild-content" placeholder="content"></textarea>
+                <button id="addChild">Add Accordion child</button>
+              </section>
+              <hr>
+              <section>
+                <h3>Toggle child at (starting from 0):</h3>
+                <input id="toggleChild-position" value="1"></input>  
+                <button id="toggleChild">Toggle child at</button>
+              </section>  
+            </div>    
+          </div>  
+        </section>
+        <hr>
+        <section class="Page-section">
+          <h2>c-multiple="true"</h2>
+          <div class="Page-sectionBlocks u-flex">
+            <div class="Page-sectionBlock u-flexGrow2">
+              <cu-accordion id="accordion-002" cu-multiple="true"></cu-accordion>
+            </div>
+
+            <div class="Page-sectionBlock u-flexGrow3">
+              <button id="closeAll">Close All</button>
+            </div>    
+          </div>  
+        </section>
+    </div>
+  </body>
+</html>
