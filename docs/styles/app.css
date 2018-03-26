@@ -6,6 +6,7 @@
      * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
+@import url("https://fonts.googleapis.com/css?family=Anton|Crimson+Text|Roboto");
 html {
   line-height: 1.15;
   /* 1 */
@@ -403,9 +404,20 @@ template {
   display: none; }
 
 body {
-  background-image: url("./images/debut_light.png");
+  background-image: url("../images/debut_light.png");
   background-repeat: repeat;
-  padding: 0; }
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #333; }
+
+hr {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+  border-color: #b3b3b3; }
+
+input, textarea {
+  display: block;
+  margin-bottom: 20px; }
 
 .u-flex {
   display: flex; }
@@ -421,8 +433,6 @@ body {
     flex: 3 1 0% !important; }
   .u-flexGrow4 {
     flex: 4 1 0% !important; }
-  .u-flexGrow5 {
-    flex: 5 1 0% !important; }
 
 .Page {
   max-width: 1300px;
@@ -430,7 +440,7 @@ body {
   .Page-title {
     padding: 0 20px; }
   .Page-section {
-    padding: 0 20px; }
+    padding: 0 20px 40px; }
   .Page-sectionBlock {
     padding: 0 20px; }
     .Page-sectionBlock:first-child {
@@ -439,26 +449,33 @@ body {
       padding-right: 0; }
 
 .cuAccordion-container {
-  padding: 0; }
+  padding: 0;
+  border: 1px solid #cccccc;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 1px;
+  margin: 0 0 20px; }
 
 .cuAccordion-childTitle {
   margin: 0;
-  padding: 10px;
-  background: #f00;
-  color: #fff;
-  border-top: 0px;
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #ffffff 1%, #eaeaea 100%);
+  color: #4d4d4d;
+  border-bottom: 1px solid #cccccc;
   border-radius: 0px;
+  font-family: "Anton";
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
   user-select: none;
   box-sizing: border-box; }
   .cuAccordion-childTitle.is-open {
-    background: #00f;
-    color: #fff; }
+    background: #c7e1ec !important;
+    color: #2e6c86 !important;
+    border-bottom: 1px solid #cccccc !important; }
   .cuAccordion-childTitle:hover {
-    background: #000;
-    color: #f0f; }
+    background: #fff;
+    color: #4d4d4d; }
+  .cuAccordion-childTitle:last-of-type {
+    border-bottom: 0; }
 
 .cuAccordion-childContent {
   margin: 0;
@@ -467,20 +484,23 @@ body {
   overflow: hidden;
   transition: all 150ms ease-out;
   padding: 0 20px;
-  background-color: #efefef;
-  border-top: 0px;
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  background-color: rgba(51, 51, 51, 0.03);
   border-radius: 0;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 2px 0 inset; }
+  box-shadow: rgba(0, 0, 0, 0.05) 0 2px 1px 0 inset;
+  font-family: "Crimson Text";
+  font-weight: normal;
+  font-style: italic;
+  font-size: inherit; }
   .cuAccordion-childContent p:first-child {
     margin-top: 0; }
   .cuAccordion-childContent p:last-child {
     margin-bottom: 0; }
   .cuAccordion-childContent.is-open {
-    opacity: 1; }
+    opacity: 1;
+    border-bottom: 1px solid #cccccc; }
   .cuAccordion-childContent::before, .cuAccordion-childContent::after {
     display: block;
     content: "";
     height: 20px; }
+  .cuAccordion-childContent:last-of-type {
+    border-bottom: 0 !important; }

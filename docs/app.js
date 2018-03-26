@@ -86,7 +86,6 @@ let addChildBtn = document.getElementById('addChild');
 let toggleChildBtn = document.getElementById('toggleChild');    
 let closeAllBtn = document.getElementById('closeAll');
 
-
 addChildBtn.addEventListener('click', function(){
     let titleNode = document.getElementById('addChild-title');
     let contentNode = document.getElementById('addChild-content');
@@ -141,19 +140,18 @@ class CuAccordion extends HTMLElement {
         this.nodeOpen = null;
     }
 
-    connectedCallback() {
-        const accordionId = this.getAttribute("cu-id");
-    }
-
     render(dataModel) {
         let content = "";
-        let container = this.querySelector('dl')
+        let container = this.querySelector('dl');
+        let event = new CustomEvent("cu-accordion:ready");
 
         dataModel.forEach((childModel) => {
             content += getChildren(childModel);
         });
 
         container.innerHTML = content;
+        
+        this.dispatchEvent(event);
 
         registerEvents(this);
     }

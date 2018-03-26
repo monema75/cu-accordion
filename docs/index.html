@@ -7,42 +7,44 @@
   </head>
   <body>
     <div class="Page">
-        <h1 class="Page-title">cu-accordion</h1>
-
-        <div class="Page-section">
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-        </div>
-        
-        <div class="Page-section u-flex">
-          <div class="Page-sectionBlock u-flexGrow3">
-              <cu-accordion id="accordion-001"></cu-accordion>
-          </div>
-
-          <div class="Page-sectionBlock u-flexGrow2">
-            <section>
-              <h3>Add Child</h3>
-              <input id="addChild-title" type="text" placeholder="title"></input>  
-              <textarea id="addChild-content" placeholder="content"></textarea>
-              <button id="addChild">Add Accordion child</button>
-            </section>
-            
-            <section>
-              <h3>Toggle child at</h3>
-              <input id="toggleChild-position" value="1"></input>  
-              <button id="toggleChild">Toggle child at</button>
-            </section>  
-          </div>    
-        </div>
-
-        <div class="Page-section u-flex">
-            <div class="Page-sectionBlock u-flexGrow3">
-                <cu-accordion id="accordion-002" cu-multiple="true"></cu-accordion>
-            </div>
-  
+        <h1 class="Page-title">cu-accordion (custom element)</h1>
+        <hr>
+        <section class="Page-section">
+          <h2>Out of the box</h2>
+          <div class="Page-sectionBlocks u-flex">
             <div class="Page-sectionBlock u-flexGrow2">
+                <cu-accordion id="accordion-001"></cu-accordion>
+            </div>
+
+            <div class="Page-sectionBlock u-flexGrow3">
+              <section>
+                <h3>Add Child</h3>
+                <input id="addChild-title" type="text" placeholder="title"></input>  
+                <textarea id="addChild-content" placeholder="content"></textarea>
+                <button id="addChild">Add Accordion child</button>
+              </section>
+              <hr>
+              <section>
+                <h3>Toggle child at (starting from 0):</h3>
+                <input id="toggleChild-position" value="1"></input>  
+                <button id="toggleChild">Toggle child at</button>
+              </section>  
+            </div>    
+          </div>  
+        </section>
+        <hr>
+        <section class="Page-section">
+          <h2>c-multiple="true"</h2>
+          <div class="Page-sectionBlocks u-flex">
+            <div class="Page-sectionBlock u-flexGrow2">
+              <cu-accordion id="accordion-002" cu-multiple="true"></cu-accordion>
+            </div>
+
+            <div class="Page-sectionBlock u-flexGrow3">
               <button id="closeAll">Close All</button>
             </div>    
-          </div>
+          </div>  
+        </section>
     </div>
   <script type="text/javascript" src="app.js"></script></body>
 </html>
