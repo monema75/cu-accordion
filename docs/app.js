@@ -136,8 +136,11 @@ fetch('./data/accordion.json')
 class CuAccordion extends HTMLElement {
     constructor() {
         super();
-        this.innerHTML = template;
         this.nodeOpen = null;
+    }
+
+    connectedCallback() {
+        this.innerHTML = template;
     }
 
     render(dataModel) {
